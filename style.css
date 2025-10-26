@@ -106,6 +106,18 @@ h6 {
 }
 
 
+.btn-outline-small {
+    width: 187px;
+    height: 60px;
+    border-radius: 20px;
+    border: 2px solid var(--color--primary);
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 12px;
+
+
+}
+
 .container {
     max-width: 1050px;
     width: 100%;
@@ -205,7 +217,7 @@ ul li {
 
 .menu-list {
     display: flex;
-    text-align: center;
+    align-items: center;
     gap: 10px;
 
 
@@ -255,13 +267,6 @@ li a {
 
 .menu-link:hover::after {
     width: 100%;
-}
-
-
-.navigation-list {
-    display: flex;
-    align-items: center;
-    gap: 10px;
 }
 
 .header_title {
@@ -480,4 +485,168 @@ li a {
     font-size: 38px;
     line-height: 1.2;
     font-weight: var(--font-weight-bold);
+}
+
+.logo {
+    width: 244px;
+    height: auto;
+}
+
+.menu-btn {
+    width: 24px;
+    height: 24px;
+
+}
+
+.six-list {
+    display: flex;
+    flex: 1;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.six-list-img {
+    width: 325px;
+    height: 296px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.list-item-sale-six {
+    width: 320px;
+    height: 170px;
+    padding: 20px 30px 25px 30px;
+    gap: 25px;
+    background-color: var(--color-gray-boild);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.list-six-sale {
+    display: flex;
+    flex: 1;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    width: 270px;
+    height: 43px;
+    gap: 60px;
+
+
+}
+
+.list-six-sale .list-six-text .data {
+    width: 114px;
+    height: 13px;
+    font-size: 12px;
+    line-height: 110.00000000000001%;
+    color: #858584;
+
+
+}
+
+
+.list-six-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 21px;
+    width: 135px;
+    height: 43px;
+}
+
+.hearder_Left h2 {
+    font-size: 38px;
+    line-height: 120%;
+    font-weight: var(--font-weight-bold);
+}
+
+.hearder_Left p {
+    font-size: 22px;
+    line-height: 160%;
+    margin-top: 10px;
+}
+
+.header_title {
+    align-items: flex-end;
+}
+
+/* Kĩ thuật Reposonsive  */
+/* Break Point */
+/* desktop 1920px */
+/* laptop 1280px */
+/* Tablet:1024px */
+/* mobile:768 */
+/* Trên */
+@media screen and (min-width : 1101px) {
+    .menu-btn {
+        display: none;
+    }
+}
+
+
+/* Dưới  */
+@media screen and (max-width : 1100px) {
+
+    .header {
+        padding: 15px 50px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .logo {
+        width: 183px;
+        height: auto;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+        height: 100vh;
+        padding: 30px 30px;
+        width: 300px;
+        background-color: var(--color--gray);
+        transform: translateX(100%);
+        transition: transform 0.3s;
+    }
+
+    .menu-list.is-open {
+        transform: translateX(0);
+    }
+
+    .creator-item {
+        width: calc((100% - 30px) / 2);
+    }
+
+    .creator-card {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .creator-rank {
+        top: 13px;
+        left: 12px;
+    }
+
+    .creator-img img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .creator-info {
+        margin-top: 0;
+        text-align: left;
+
+    }
+
+    @media screen and (max-width : 768px) {
+        .creator-item {
+            width: 100%;
+        }
+    }
 }

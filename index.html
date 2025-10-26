@@ -9,6 +9,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
 </head>
 
 
@@ -16,28 +17,27 @@
     <div class="wrap wrap-home-page">
         <header class="header">
             <a href="index.html">
-                <img src="./img/logo.png" alt="NFT Marketplace">
+                <img class="logo" src="./img/logo.png" alt="NFT Marketplace">
             </a>
             <div class="navigation-list">
                 <nav class="navigation">
                     <ul class="menu-list">
-                        <li class="menu-item"><a class="menu-link" href="#">Marketplace</a></li>
+                        <li class=" menu-item"><a class="menu-link" href="#">Marketplace</a></li>
                         <li class="menu-item"><a class="menu-link" href="#">Rankings</a></li>
                         <li class="menu-item special"><a class="menu-link" href="#">Connect a wallet</a></li>
+
+                        <button class="btn btn-primary btn-small">
+                            <div class="btn-icon"><img src="./img/User.png" alt="User"></div>
+                            Sign Up
+                        </button>
                     </ul>
                 </nav>
-
-
-                <button class="btn btn-primary btn-small">
-                    <span class="btn-icon"><img src="./img/User.png" alt="User"></span>
-                    Sign Up
+                <button type="button" class="menu-btn">
+                    <img src="./img/nav menu.png" alt="Menu">
                 </button>
             </div>
-
-
         </header>
         <main>
-
             <section class="section">
                 <div class="container">
                     <div class="list-title">
@@ -402,6 +402,8 @@
             <section class="section section-creator">
                 <div class="container">
 
+
+
                     <div class="header_title">
                         <div class="hearder_Left">
                             <h2>Top Creators</h2>
@@ -697,11 +699,140 @@
                 </div>
             </section>
 
+            <section class="secttion section-six">
+                <div class="container">
+                    <div class="header_title">
+                        <div class="hearder_Left">
+                            <h2>Discover More NFTs</h2>
+                            <p>Explore new trending NFTs</p>
+                        </div>
+                        <div class="hearder_Right">
+                            <button class="btn btn-outline btn-outline-small"><span>
+                                    <img src="./img/Eye.png" alt="">
+                                </span>
+                                See All
+                            </button>
+                        </div>
+                    </div>
+                    <div class="six-list">
+                        <div class="six-list-img">
+                            <div>
+                                <img src="./img/Image.png" alt="">
+                            </div>
+                            <div class="list-item-sale-six">
+                                <div class="text">
+                                    <span>Distant Galaxy</span>
+                                </div>
+                                <div class="list-item-saleV2">
+                                    <span>
+                                        <img src="./img/ttt.png" alt=" MoonDancer">
+                                    </span>
+                                    <span>
+                                        MoonDancer
+                                    </span>
+                                </div>
+
+                                <div class="list-six-sale">
+                                    <div class="list-six-text">
+                                        <p class="data">Price</p>
+                                        <p>1.63 ETH</p>
+                                    </div>
+                                    <div class="list-six-text">
+                                        <p class="data">Highest Bid</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-        </main>
-        <footer></footer>
+                        <div class="six-list-img">
+                            <div>
+                                <img src="./img/life.png" alt="">
+                            </div>
+                            <div class="list-item-sale-six">
+                                <div class="text">
+                                    <span>Life On Edena</span>
+                                </div>
+                                <div class="list-item-saleV2">
+                                    <span>
+                                        <img src="./img/ma.png" alt=" NebulaKid">
+                                    </span>
+                                    <span>
+                                        NebulaKid
+                                    </span>
+                                </div>
+
+                                <div class="list-six-sale">
+                                    <div class="list-six-text">
+                                        <p class="data">Price</p>
+                                        <p>1.63 ETH</p>
+                                    </div>
+                                    <div class="list-six-text">
+                                        <p class="data">Highest Bid</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="six-list-img">
+                            <div>
+                                <img src="./img/as.png" alt="">
+                            </div>
+                            <div class="list-item-sale-six">
+                                <div class="text">
+                                    <span>AstroFiction</span>
+                                </div>
+                                <div class="list-item-saleV2">
+                                    <span>
+                                        <img src="./img/quy.png" alt=" Spaceone">
+                                    </span>
+                                    <span>
+                                        Spaceone
+                                    </span>
+                                </div>
+
+                                <div class="list-six-sale">
+                                    <div class="list-six-text">
+                                        <p class="data">Price</p>
+                                        <p>1.63 ETH</p>
+                                    </div>
+                                    <div class="list-six-text">
+                                        <p class="data">Highest Bid</p>
+                                        <p>0.33 wETH</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+
+            <script>
+                const menuBtn = document.querySelector(".menu-btn");
+                const menulist = document.querySelector(".menu-list");
+                console.log(menuBtn, menulist);
+
+                if (menuBtn && menulist) {
+                    menuBtn.addEventListener("click", function () {
+                        menulist.classList.add("is-open");
+                    });
+                }
+                document.addEventListener("click", function (event) {
+                    if (!menulist.contains(event.target) && !menuBtn.contains(event.target)) {
+                        menulist.classList.remove("is-open");
+                    }
+                });
+            </script>
+
+
     </div>
+    </main>
+    <footer></footer>
+
 </body>
 
 </html>
